@@ -1,0 +1,51 @@
+{
+  "id": "2401967",
+  "name": "yanzi-editor",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "燕子编辑器",
+  "glyphs": [
+    {
+      "icon_id": "1388105",
+      "name": "download",
+      "font_class": "download",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "18991567",
+      "name": "cloud upload",
+      "font_class": "cloudupload",
+      "unicode": "e83c",
+      "unicode_decimal": 59452
+    },
+    {
+      "icon_id": "12265786",
+      "name": "reset_defalut",
+      "font_class": "reset_defalut",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "504566",
+      "name": "代码",
+      "font_class": "daima",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "1159866",
+      "name": "看房选房",
+      "font_class": "kanfangxuanfang",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "11126523",
+      "name": "分栏",
+      "font_class": "fenlan",
+      "unicode": "e714",
+      "unicode_decimal": 59156
+    }
+  ]
+}
