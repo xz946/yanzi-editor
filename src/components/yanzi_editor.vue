@@ -2,9 +2,9 @@
     <div id="yzEditor">
 
     <div class="tools" v-if="options.isTools">
-        <span :class="{'activeBtn':btnIndex==1}" @click="showCode" class="iconfont">&#xe604;</span>
-        <span :class="{'activeBtn':btnIndex==2}" @click="showView" class="iconfont">&#xe602;</span>
-        <span :class="{'activeBtn':btnIndex==3}" @click="showCodeAndView" class="iconfont">&#xe714;</span>
+        <span :class="{'activeBtn':btnIndex==1}" @click="showCodeAndView" class="iconfont">&#xe714;</span>
+        <span :class="{'activeBtn':btnIndex==2}" @click="showCode" class="iconfont">&#xe604;</span>
+        <span :class="{'activeBtn':btnIndex==3}" @click="showView" class="iconfont">&#xe602;</span>
         <span @click="reset" class="iconfont">&#xe60a;</span>
         <!-- 触发按钮 -->
         <span @click="upload" class="iconfont">&#xe83c;</span>
@@ -103,7 +103,7 @@
     props: ["value", "save", "click", "searchStr","options","readOnly"],
     data() {
       return {
-        btnIndex:3,
+        btnIndex:1,
         screenWidth: 0,
         screenHeight: 0,
         myEditor: {}, //编辑器对象
@@ -395,9 +395,22 @@
         // ed.contentEditable = true;
         // ed.designMode = 'on';
       },
+      // 双栏显示代码和预览
+      showCodeAndView(){
+          this.btnIndex = 1;
+          var myBody = document.getElementById("myBody");
+          var width = myBody.style.width;
+console.log(width)
+          var view = document.getElementById("yanzi-view");
+          view.style.display = "block";
+
+          var newWidth = parseFloat((width.substring(0,width.length-1))) / 2;
+          view.style.width = newWidth + "px";
+          this.setEditorSize(newWidth+"px")
+      },
       // 单栏显示代码
       showCode(){
-          this.btnIndex = 1;
+          this.btnIndex = 2;
           var myBody = document.getElementById("myBody");
           var width = myBody.style.width;
           console.log(width)
@@ -407,7 +420,7 @@
       },
       // 单栏显示 预览
       showView(){
-          this.btnIndex = 2;
+          this.btnIndex = 3;
           var myBody = document.getElementById("myBody");
           var width = myBody.style.width;
 console.log(width)
@@ -420,19 +433,7 @@ console.log(width)
         //   view.style.left = "0px";
           this.setEditorSize(0)
       },
-      // 双栏显示代码和预览
-      showCodeAndView(){
-          this.btnIndex = 3;
-          var myBody = document.getElementById("myBody");
-          var width = myBody.style.width;
-console.log(width)
-          var view = document.getElementById("yanzi-view");
-          view.style.display = "block";
 
-          var newWidth = parseFloat((width.substring(0,width.length-1))) / 2;
-          view.style.width = newWidth + "px";
-          this.setEditorSize(newWidth+"px")
-      },
       // 重置内容
       reset(){
         this.myEditor.setValue(this.defalutValue);
