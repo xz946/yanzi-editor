@@ -6,6 +6,13 @@
   "description": "燕子编辑器",
   "glyphs": [
     {
+      "icon_id": "6237075",
+      "name": "下",
+      "font_class": "tubiaozhizuo-",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
       "icon_id": "1388105",
       "name": "download",
       "font_class": "download",

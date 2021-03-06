@@ -8,6 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@emmetio/codemirror-plugin": "^1.2.2",
+    "codemirror": "^5.59.4",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
