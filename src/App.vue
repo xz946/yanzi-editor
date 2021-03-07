@@ -53,7 +53,6 @@ export default {
 </script>
 
 <style>
-@import url("./assets/iconfont/iconfont.css");
 html,
 body,
 #app {

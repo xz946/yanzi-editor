@@ -100,7 +100,23 @@ emmet(CodeMirror);
 
 export default {
   name: "yanzi-editor",
-  props: ["value", "options"],
+  props: {
+    value: {
+      type: String,
+      default: ""
+    },
+    options: {
+      type: Object,
+      default: function() {
+        return {
+          isTools: true,
+          readOnly: false,
+          width: window.innerWidth,
+          height: window.innerHeight
+        };
+      }
+    }
+  },
   data() {
     return {
       // 配置
@@ -505,7 +521,8 @@ export default {
 };
 </script>
   
-  <style lang="css" scoped>
+  <style lang="css">
+@import url("../assets/iconfont/iconfont.css");
 * {
   margin: 0;
   padding: 0;
