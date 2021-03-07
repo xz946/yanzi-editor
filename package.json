@@ -1,7 +1,7 @@
 {
   "name": "yanzi_editor",
   "description": "燕子在线html编辑器，基于codeMirror和Emmet，可以很容易得到一个轻量级的编辑器。也可二次开发",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "./dist/yanzi_build.umd.min.js",
   "files": [
     "lib/static/*",
