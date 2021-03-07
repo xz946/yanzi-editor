@@ -505,7 +505,7 @@ export default {
 };
 </script>
   
-  <style>
+  <style lang="css" scoped>
 * {
   margin: 0;
   padding: 0;
